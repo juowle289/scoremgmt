@@ -44,6 +44,7 @@ body p {
     margin-top: 1em;
     color: #ffffff;
 }
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -178,4 +179,46 @@ form button img{width: 1.5em; height: 1.5em; margin-right: 0.5em;}
     border: none;
     height: 1px;
     background: #ccc;
+}
+
+/* For object */
+
+.form-container {
+    padding-top: 5em;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    margin-right: 40px;
+}
+
+.circle {
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+.circle a i{
+    margin-bottom: 2em;
+    font-size: 60px;
+    color: #1E293B;
+}
+
+.circle h3 {
+    position: absolute;
+    margin-top: 7.5em;
+}
+
+.select {
+    color: #ffffff;
 }
