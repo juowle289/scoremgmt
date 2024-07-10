@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link href="https://fonts.cdnfonts.com/css/niveau-grotesk-regular" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/home/home.css">
+    <link rel="stylesheet" href="/teacherAcc/studentList.css">
+    <title>D3L - Danh sách học sinh</title>
+</head>
+<body class="d-flex">
+    
+    <input type="checkbox" name="checkbox" id="collapse">
+    <label for="collapse" id="collapse-label"><i class="bi bi-arrow-right-circle-fill"></i></label>
+    <aside id="sidebar">
+        <div class="head justify-content-center">
+            <i class="bi bi-mortarboard-fill"></i>
+            <a href="/home/displayTeacher.html" class="text-decoration-none">
+                <h3 class="text-white">D3L</h3>
+            </a>
+        </div>
+
+
+        <div class="function">
+            <div class="function">
+                <div id="_1">
+                    <div class="announcement">
+                        <a href="/notification/notificationTeacher.html" class="text-decoration-none"><i class="bi bi-info-circle-fill"></i><h3>Thông tin chung</h3></a>
+                    </div>
+                    <div class="statistic">
+                        <a href="/adminAcc/statistic.html" class="text-decoration-none"><i class="bi bi-bar-chart-fill"></i><h3>Thống kê</h3></a>
+                    </div>
+                    <div class="class">
+                        <a href="/adminAcc/class.html" class="text-decoration-none"><i class="bi bi-book-fill"></i><h3>Quản lý lớp</h3></a>
+                    </div>
+                    <div class="studentList">
+                        <a href="/teacherAcc/studentList.html" class="text-decoration-none"><i class="bi bi-people-fill"></i><h3>Quản lý học sinh</h3></a>
+                    </div>
+                    <div class="studentDetails">
+                        <a href="/adminAcc/studentDetails.html" class="text-decoration-none"><i class="bi bi-person-exclamation"></i><h3>Chi tiết học sinh</h3></a>
+                    </div>
+                    <div class="teacherList">
+                        <a href="/adminAcc/teacherList.html" class="text-decoration-none"><i class="bi bi-person-workspace"></i><h3>Quản lý giáo viên</h3></a>
+                    </div>
+                    <div class="enterScores">
+                        <a href="/adminAcc/enterScores.html" class="text-decoration-none"><i class="bi bi-pencil-square"></i><h3>Nhập điểm</h3></a>
+                    </div>
+                </div>
+                
+                <div id="_2">
+                    <div class="setting">
+                        <a href="/setting/setting.html" class="text-decoration-none"><i class="bi bi-gear-fill"></i><h3>Cài đặt</h3></a>
+                    </div>
+                    <div class="logOut">
+                        <a href="/formLogin/object.html" class="text-decoration-none"><i class="bi bi-box-arrow-right"></i><h3>Đăng xuất</h3></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </aside>
+    <main class="w-100">
+        <header class="w-100">
+            <p>Danh sách học sinh</p>
+            <div class="user">
+                <i class="bi bi-bell-fill" id="bell"></i>
+                <h3 class="fs-4">Lê Tiến Được</h3>                
+                <i class="bi bi-person-circle ms-3"></i>
+            </div>
+        </header>
+        
+        <div class="container">
+            <!-- Nút thêm -->
+            <div class="btn">
+                <div>
+                    <button id="add"></button>
+                </div>
+                
+                <div>
+                    <i class="fa-solid fa-print" id="printBtn"></i>
+                </div>
+            </div>
+
+            <!-- Thêm Học sinh -->
+            <div id="controls">
+                <table id="addTable">
+                    <tr>
+                        <td><label for="studentId">Mã học sinh <span>*</span> :</label></td>
+                        <td><input type="text" id="studentId" placeholder="ID"></td>
+
+                        <td><label for="studentName">Tên học sinh <span>*</span> :</label></td>
+                        <td><input type="text" id="studentName" placeholder="Tên"><br></td>
+
+                        <td><label for="studentDOB">Ngày sinh <span>*</span> :</label></td>
+                        <td><input type="date" id="studentDOB"><br></td>
+ 
+                        <td><label for="studentClass">Lớp <span>*</span> :</label></td>
+                        <td><input type="text" id="studentClass" placeholder="Lớp"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="studentAddress">Địa chỉ <span>*</span> :</label></td>
+                        <td><input type="text" id="studentAddress" placeholder="Địa chỉ"><br></td>
+
+                        <td><label for="studentPhone">Số điện thoại <span>*</span> :</label></td>
+                        <td><input type="number" id="studentPhone" placeholder="Số điện thoại"><br></td>
+
+                        <td><label for="studentEmail">Email <span>*</span> :</label></td>
+                        <td><input type="text" id="studentEmail" placeholder="Email"><br></td>
+
+                        <td></td>
+                        <td>
+                            <button id="addStudentBtn"><i id="printIcon" class="fa-regular fa-square-plus"></i> Thêm</button>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Bảng học sinh -->
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã học sinh</th>
+                        <th>Tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Lớp</th>
+                        <th>Địa chỉ</th>
+                        <th>SĐT</th>
+                        <th>Email</th>
+                        <th>Quản lý</th>
+                    </tr>
+                    <tr>
+                        <th>0</th>
+                        <th>
+                            <input type="text" class="searchInput" placeholder="Mã học sinh">
+                        </th>
+                        <th>
+                            <input type="text" class="searchInput" placeholder="Tên học sinh">
+                        </th>
+                        <th>
+                            <input type="text" class="searchInput" placeholder="Ngày sinh">
+                        </th>
+                        <th>
+                            <select class="classSelect">
+                                <option value="">Lớp</option>
+                                <option value="12A1">12A1</option>
+                                <option value="12A2">12A2</option>
+                                <option value="12A3">12A3</option>
+                                <option value="12A4">12A4</option>
+                                <option value="12A5">12A5</option>
+                                <option value="12A6">12A6</option>
+                                <option value="12A7">12A7</option>
+                                <option value="12A8">12A8</option>
+                                <option value="12A9">12A9</option>
+                                <option value="12A10">12A10</option>
+                                <option value="12A11">12A11</option>
+                                <option value="12A12">12A12</option>
+                            </select>
+                        </th>
+                        <th>
+                            <input type="text" class="searchInput" placeholder="Địa chỉ">
+                        </th>
+                        <th>
+                            <input type="text" class="searchInput" placeholder="Số điện thoại">
+                        </th>
+                        <th>
+                            <input type="text" class="searchInput" placeholder="Email">
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <footer>
+            <div><p>&copy; D3L. All rights reserved.</p></div>
+            <div>
+                <p>Tems</p>
+                <p>Privacy</p>
+                <p>Cookies</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="/teacherAcc/studentList.js"></script>
+    <script src="/home/home.js"></script>
+   
+</body>
+</html>

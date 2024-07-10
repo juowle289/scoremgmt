@@ -1,0 +1,87 @@
+:root {
+    --black: #171b27;
+    --blue1: #1E293B;
+    --blue2: #475569;
+    --blue3: #D5DBE2;
+    --boder-black: .1em solid #171b27;
+    --boder-blue1: .1em solid #1E293B;
+    --boder-blue2: .1em solid #475569;
+    --boder-blue3: .1em solid #D5DBE2;
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+#_1 :nth-child(6) a {
+    background: var(--blue1);
+}
+
+.left-side,
+.right-side {
+    width: 45%;
+    border: var(--boder-blue3);
+    padding: 1.2em;
+    border-radius: 0.5em;
+}
+
+.left-side h2,
+.right-side h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+
+.left-side table,
+.right-side table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.left-side th,
+.left-side td,
+.right-side th,
+.right-side td {
+    text-align: left;
+    padding: 0.4em;
+    border: var(--boder-blue3);
+}
+
+.search-bar {
+    width: 100%;
+    height: 3em;
+    padding: 1em;
+    border: var(--boder-blue3);
+    border-radius: 0.5em;
+    margin-bottom: 0.8em;
+}
+
+.teacher-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8em;
+}
+
+.teacher-profile img {
+    width: 3.1em;
+    height: 3.1em;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0.8em;
+    background: var(--blue3);
+}
+
+.teacher-profile span {
+    color: var(--blue1);
+    font-weight: bold;
+}
+
+.right-side p {
+    margin-bottom: 0.8em;
+}
+
+.left-side :is(td, th),
+.right-side td {
+    border: .1em solid #0000;
+}
+
+.left-side tr:hover {
+    box-shadow: var(--box-shadow);
+}

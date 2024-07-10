@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Niveau Grotesk', sans-serif;                                     
+}
+    
+:root {
+    --black: #171b27;
+    --blue1: #1E293B;
+    --blue2: #475569;
+    --blue3: #D5DBE2;
+    --boder-black: .1em solid #171b27;
+    --boder-blue1: .1em solid #1E293B;
+    --boder-blue2: .1em solid #475569;
+    --boder-blue3: .1em solid #D5DBE2;
+    --boder-blue4: .1em solid #ccc;
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+        
+}
+
+.function #_1 :nth-child(2) a {
+    background: var(--blue1);
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/*//TODO: Main content */
+.main-content {
+    /* flex: 1; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    color: #fff;
+    }
+    
+.stat-item h2 {
+    font-size: 1.5em;
+    color: var(--blue1);
+}
+
+.stat-item {
+    flex: 1;
+    background-color: rgba(61, 76, 100, .2);
+    border: .12em solid var(--blue3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--blue2);
+}
+
+.stat-item i {
+    font-size: 1.3em;
+}
+
+
+/*//TODO: Main section */
+.attendance, .performance {
+    flex: 1;
+    background-color: #fff;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: .6em;
+    box-shadow: 2px 4px 10px rgba(61, 76, 100, .4);
+}
+
+.attendance .chart {
+    position: relative;
+    height: 20em;
+    margin-top: 10px;
+}
+
+.performance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.performance-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.performance-item i {
+    font-size: 2.5em;
+}
+.performance-item h4 {
+    font-size: 1.2em;
+}
+
+
+.lessons {
+    margin-top: 20px;
+}
+
+.lesson-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lesson-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* //TODO: Lịch */
+
+.right-sidebar {
+    width: 19em;
+    background-color: #fff;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: -5px 0 10px rgba(0,0,0,0.1);
+}
+
+.calendar h2, .events h2 {
+    font-weight: bold;
+    margin: 1em 0 1em 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.calendar {
+    background-color: rgba(61, 76, 100, .05);
+    border-radius: 1em;
+    width: fit-content;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    padding: 1em;
+    gap: .2em;
+}
+
+.day {
+    text-align: center;
+    color: #ccc;
+}
+
+.date {
+    text-align: center;
+    padding: .4em;
+    border-radius: 50%;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+.date:hover {
+    background-color: var(--blue2);
+    color: #ccc;
+}
+
+.date.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.date.disabled:hover {
+    background: transparent;
+}
+
+.date:active {
+    background-color: var(--blue1);
+    color: #fff;
+}
+
+/* // TODO SỰ Kiện sắp tới  */
+.event-time {
+    font-weight: bold;
+}
+
+.event-title {
+    font-weight: bold;
+    color: var(--blue2); 
+}
+
+.event-details {
+    color: var(--blue2);
+}
+
+.event-item {
+    border-left: 4px solid var(--blue2);
+    padding-left: .8em;
+    margin-bottom: 1.5rem;
+}
+
+.event-header {
+    color: var(--blue2);
+}
+
+/* //TODO: Kỳ thi */
+
+.exams {
+    width: 100%;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 2px 4px 10px rgba(61, 76, 100, .4);
+}
+
+.attendance, h2
+.performance h2,
+.exams h2 {
+    margin: 1em 0;
+}
+
+.exam-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: .6em;
+    border-bottom: .1em solid var(--blue3);
+}
+
+.exam-item i {
+    font-size: 1.1em;
+    height: fit-content;
+    color: var(--blue1);
+}
+
+.exam-item p,
+.exam-item div:nth-child(3) p i {
+    font-size: .9em;
+}
+
+.exam-list h4 {
+    font-size: 1.2em;
+}
+
+.notify {
+    width: 5em;
+    height: 2%;
+    border: .1em solid var(--blue3);
+    background-color: transparent;
+    color: var(--blue1);
+    border-radius: .3em;
+    padding: .5em .6em;
+    cursor: pointer;
+}
+
+.notify:hover {
+    background-color: var(--blue3);
+    transition: 150ms ease;
+}
+
+.notify:hover i {
+    color: var(--blue1);
+
+}
+
+#icon-check {
+    display: none;
+}
+
+#icon-book {
+    background: var(--blue3);
+    border-radius: .3em;
+    padding: .6em;
+}
+
+/* //TODO Thông báo  */
+#reminder {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 1000;
+}
+
+.reminder {
+    width: 15em;
+    background-color: #ffffea;
+    color: var(--blue1);
+    padding: .5em 1em;
+    margin-bottom: 1em;
+    border-left: .6em solid #ffe31b;
+    border-top: .1em solid #ffe31b;
+    border-right: .1em solid #ffe31b;
+    border-bottom: .1em solid #ffe31b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.reminder.show {
+    opacity: 1;
+}
+

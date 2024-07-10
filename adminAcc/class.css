@@ -1,0 +1,142 @@
+:root {
+    --black: #171b27;
+    --blue1: #1E293B;
+    --blue2: #475569;
+    --blue3: #D5DBE2;
+    --boder-black: .1em solid #171b27;
+    --boder-blue1: .1em solid #1E293B;
+    --boder-blue2: .1em solid #475569;
+    --boder-blue3: .1em solid #D5DBE2;
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+.function :nth-child(3) a {
+    background: var(--blue1);
+}
+
+.card {
+    width: 18.8em;
+    padding: 1.2em;
+    margin: 1.2em;
+    background-color: #fff;
+    border-radius: 0.6em;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.card-header {
+    background-color: var(--blue1);
+    box-shadow: 0 .5em .1em #1E293B;
+    padding: 0.6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    color: #fff;
+    margin: 0;
+}
+
+.card-header p {
+    color: #fff;
+}
+
+.card-body {
+    padding: 1.2em;
+    display: flex;
+    justify-content: center;
+}
+
+.card-body img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.card-footer {
+    background-color: var(--blue3);
+    padding: 0.6em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-footer .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-footer .item span {
+    font-size: .85em;
+    color: var(--black);
+}
+
+/* Search bar styles */
+.search-bar {
+    margin: 1.2em;
+    justify-content: space-between;
+    background-color: var(--blue3);
+    padding: 0.6em;
+    border-radius: 0.3em;
+    box-shadow: var(--box-shadow);
+}
+
+.search-bar input {
+    width: 30%;
+    border: none;
+    padding: 0.6em;
+    border-radius: 0.3em;
+}
+
+.search-bar button {
+    background-color: var(--blue1);
+    color: #fff;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.add-group-button {
+    background-color: var(--blue1);
+    color: #fff;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    margin-left: 1.2em;
+}
+
+#classForm {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin: auto;
+    font-weight: bold;
+}
+
+#classForm button {
+    background-color: #475569; 
+    color: #fff;
+    border: black; 
+}
+
+#classForm button:hover {
+    background-color: white; 
+    color: #5c5c5c;
+}
+
+#add-class-form .mb-3 {
+    flex-basis: 50%;
+    padding: 0 10px; 
+    box-sizing: border-box; 
+}
+
+@media (max-width: 768px) {
+    #add-class-form .mb-3 {
+        flex-basis: 100%; 
+    }
+}

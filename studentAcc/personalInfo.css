@@ -1,0 +1,162 @@
+
+:root {
+    --black: #171b27;
+    --blue1: #1E293B;
+    --blue2: #475569;
+    --blue3: #D5DBE2;
+    --boder-black: 0.1em solid #171b27;
+    --boder-blue1: 0.1em solid #1E293B;
+    --boder-blue2: 0.1em solid #475569;
+    --boder-blue3: 0.1em solid #D5DBE2;
+    --box-shadow: 0em 0em 0.6em rgba(0, 0, 0, .2);
+}
+
+#_1 :nth-child(2) a {
+    background: var(--blue1);
+}
+
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.highlight {
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    border-radius: .3em;
+}
+
+
+.profile-image {
+    width: 10em;
+    height: 10em;
+    margin-right: 5em;
+    border-radius: 50%;
+}
+.profile-image img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h2 {
+    font-weight: bold;
+}
+
+.details {
+    margin-top: 1.88em;
+}
+
+.details label {
+    display: block;
+    margin-bottom: 0.31em;
+    font-weight: bold;
+}
+
+.details input {
+    width: 100%;
+    padding: 0.63em;
+    margin-bottom: 0.94em;
+    border: var(--boder-blue3);
+    border-radius: 0.25em;
+    box-sizing: border-box;
+}
+
+.details textarea {
+    width: 100%;
+    height: 6.25em;
+    padding: 0.63em;
+    margin-bottom: 0.94em;
+    border: var(--boder-blue3);
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.buttons button {
+    padding: 0.63em 1.25em;
+    background-color: var(--blue1);
+    color: #fff;
+    border: 0.06em solid #0000;
+    border-radius: 0.25em;
+    font-size: .9em;
+    transition: background-color 350ms ease;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    color: var(--blue1);
+    background-color: #fff;
+    border: var(--boder-blue1);
+}
+
+.upload-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25em;
+}
+
+.upload-image label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.38em;
+    height: 9.38em;
+    border: 0.13em dashed #ccc;
+    border-radius: 0.31em;
+    cursor: pointer;
+    position: relative;
+}
+
+.upload-image label:hover {
+    background-color: #f2f2f2;
+}
+
+.upload-image label i {
+    font-size: 1.5em;
+    color: var(--blue3);
+}
+
+.upload-image input[type="file"] {
+    display: none;
+}
+
+
+#reminder {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 1000;
+}
+
+.reminder {
+    width: 15em;
+    background-color: #ffffea;
+    color: var(--blue1);
+    padding: .5em 1em;
+    margin-bottom: 1em;
+    border-left: .6em solid #ffe31b;
+    border-top: .1em solid #ffe31b;
+    border-right: .1em solid #ffe31b;
+    border-bottom: .1em solid #ffe31b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.reminder.show {
+    opacity: 1;
+}

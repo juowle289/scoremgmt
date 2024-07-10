@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link href="https://fonts.cdnfonts.com/css/niveau-grotesk-regular" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/home/home.css">
+    <link rel="stylesheet" href="/studentAcc/personalInfo.css">
+    <title>D3L - Thông tin giáo viên</title>
+</head>
+<body class="d-flex">
+    
+    <input type="checkbox" name="checkbox" id="collapse">
+    <label for="collapse" id="collapse-label"><i class="bi bi-arrow-right-circle-fill"></i></label>
+    <aside id="sidebar">
+        <div class="head justify-content-center">
+            <i class="bi bi-mortarboard-fill"></i>
+            <a href="/home/displayTeacher.html" class="text-decoration-none">
+                <h3 class="text-white">D3L</h3>
+            </a>
+        </div>
+
+
+        <div class="function">
+            <div id="_1">
+                <div class="announcement">
+                    <a href="/notification/notificationTeacher.html" class="text-decoration-none"><i class="bi bi-info-circle-fill"></i><h3>Thông tin chung</h3></a>
+                </div>
+                <div class="personalInfo">
+                    <a href="/home/displayTeacher.html" class="text-decoration-none"><i class="bi bi-person-exclamation"></i><h3>Thông tin giáo viên</h3></a>
+                </div>
+                <div class="calendar">
+                    <a href="/teacherAcc/calendarLesson.html" class="text-decoration-none"><i class="bi bi-calendar2-week-fill"></i><h3>Lịch giảng dạy</h3></a>
+                </div>
+            </div>
+            
+            <div id="_2">
+                <div class="setting">
+                    <a href="/setting/settingTeacher.html" class="text-decoration-none"><i class="bi bi-gear-fill"></i><h3>Cài đặt</h3></a>
+                </div>
+                <div class="logOut">
+                    <a href="/formLogin/object.html" class="text-decoration-none"><i class="bi bi-box-arrow-right"></i><h3>Đăng xuất</h3></a>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+    <main class="w-100">
+        <header class="w-100">
+            <p>Thông tin giáo viên</p>
+            <div class="user">
+                <i class="bi bi-bell-fill" id="bell"></i>
+                <h3 class="fs-4">Pimtha</h3>                
+                <img src="https://kenh14cdn.com/203336854389633024/2024/6/8/photo2024-06-0821-08-00-17178556954161213899054.jpg" alt="avt-Pimtha">           
+            </div>
+        </header>
+        
+        <div class="container-fluid px-5 flex-column">
+            <div id="reminder"></div>
+            <div class="profile d-flex col-9 mt-4 align-items-center">
+                <div class="profile-image col-3">
+                    <img src="https://kenh14cdn.com/203336854389633024/2024/6/8/photo2024-06-0821-08-00-17178556954161213899054.jpg" alt="Profile Picture">
+                </div>
+                <div class="profile-info col-0">
+                    <h2>Pimtha Thanida Tumwattana</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 d-flex ms-auto justify-content-end">
+                    <div class="buttons highlight">
+                        <button id="editProfileBtn"><i class="bi bi-pen-fill me-2"></i>Edit Profile</button>
+                    </div>
+                    <div class="buttons highlight ms-3">
+                        <button id="saveProfileBtn"><i class="bi bi-floppy-fill me-2"></i>Save</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="details col-6 bg-light pt-2">
+                    <div class="d-flex">
+                        <div class="flex-column w-100 ">
+                            <label for="firstName">Tên</label>
+                            <input type="text" id="firstName" value="Pimtha">
+                        </div>
+                        <div class="flex-column w-100 ms-5">
+                            <label for="lastName">Họ</label>
+                            <input type="text" id="lastName" value="Thanida Tumwattana">
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-column w-100">
+                            <label for="id">ID</label>
+                            <input type="number" id="id" value="1771020193">
+                        </div>
+                        <div class="flex-column w-100 ms-5">
+                            <label for="phoneNumber">Số diện thoại</label>
+                            <input type="tel" id="phoneNumber" value="+84 325 278 009">
+                        </div>
+                    </div>
+                    <div class="flex-column">
+                        <label for="address">Địa chỉ</label>
+                        <input type="text" id="address" value="Chiang Mai, Thái Lan">
+                    </div>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="pimtha93@.com">
+                    <label for="bio">Miêu tả</label>
+                    <textarea id="bio" placeholder="Không có" rows="5"></textarea>
+                </div>
+
+                <!-- Cột 2 -->
+                <div class="details col-6 bg-light pt-2">
+                    
+                    <div class="d-flex">
+                        <div class="flex-column w-100 ">
+                            <label for="ethnic">Dân tộc</label>
+                            <input type="text" id="ethnic" value="">
+                        </div>
+                        <div class="flex-column w-100 ms-5">
+                            <label for="gender">Giới tính</label>
+                            <input type="text" id="gender" value="Nữ">
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-column w-100">
+                            <label for="dateBirth">Ngày sinh</label>
+                            <input type="date" id="phoneNumber">
+                        </div>
+                        <div class="flex-column w-100 ms-5">
+                            <label for="identityCard">CCCD/ CMND</label>
+                            <input type="number" id="identityCard" value="" placeholder="Không có">
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-column w-100">
+                            <label for="daaaaaaaaloateBirth">Đoàn viên</label>
+                            <input type="text" id="phoneNumber" value="">
+                        </div>
+                        <div class="flex-column w-100 ms-5">
+                            <label for="identityCard">Ngày vào đoàn</label>
+                            <input type="date" id="identityCard" value="" placeholder="Không có">
+                        </div>
+                    </div>
+
+                    <div class="upload-image col-12 justify-content-center">
+                        <label for="imageUpload" class="justify-content-center">
+                            <i class="fas fa-upload"></i>
+                        </label>
+                    </div>
+                    <input type="file" id="imageUpload">
+                </div>
+            </div>
+        </div>
+        <div id="blurOverlay" class="blur-overlay" style="display: none;"></div>
+        <footer>
+            <div><p>&copy; D3L. All rights reserved.</p></div>
+            <div>
+                <p>Tems</p>
+                <p>Privacy</p>
+                <p>Cookies</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="/home/home.js"></script>
+    <script src="/studentAcc/personalInfor.js"></script>
+   
+</body>
+</html>

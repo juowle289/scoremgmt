@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>D3L - Đối tượng người dùng</title>
+    <link rel="stylesheet" href="formlogin.css">
+</head>
+    <style>
+        .form-container {
+            padding-top: 5em;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 30vh;
+            margin-right: 40px;
+        }
+
+        .circle {
+            margin-left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            flex-direction: column;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+        }
+        .circle a i{
+            margin-bottom: 2em;
+            font-size: 60px;
+            color: #1E293B;
+        }
+
+        .circle h3 {
+            position: absolute;
+            margin-top: 7.5em;
+        }
+
+        .select {
+            color: #ffffff;
+        }
+    </style>
+<body>
+
+    <div class="form-container">
+            <a href="/formLogin/object.html"><i class="bi bi-mortarboard-fill"></i></a>
+            <h1>Logn in to account</h1>
+
+        <div class="container">
+            <div class="circle">
+                <a href="/formLogin/formLoginAdmin.html"><i class="bi bi-person-fill-gear"></i></a>
+                <h3>Admin</h3>
+            </div>
+            <div class="circle">
+                    <a href="/formLogin/formLoginTeacher.html"><i class="bi bi-person-video3"></i></i></a>
+                    <h3>Teacher</h3>
+            </div>
+            <div class="circle">
+                <a href="/formLogin/formLoginStudent.html"><i class="bi bi-backpack-fill"></i></a>
+                <h3>Student</h3>
+            </div>
+        </div>
+        <div class="select">
+            <h2>Are you logged in as ?</h2>
+        </div>
+
+        <div class="background">
+            <img src="/imageF/background.jpg">
+        </div>
+    </div>
+</body>
+</html>

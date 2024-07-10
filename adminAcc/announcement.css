@@ -1,0 +1,61 @@
+aside {
+    height: 100vh;
+}
+.admin-label {
+    font-size: 24px;
+    font-weight: bold; 
+}
+
+.time-label {
+    font-size: 14px; 
+    color: #777; 
+    display: inline; 
+}
+
+.message-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 18px; 
+    text-align: left; 
+}
+
+.message-item p {
+    font-size: 20px;
+    margin-left: 0%;
+}
+
+.message-item img {
+    width: 900px;
+    height: auto;
+    max-height: 500px;
+    margin-left: 70px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 0%;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 10px; 
+}
+
+.bi-upload {
+    font-size: 2em;
+    padding: 2em;
+    border: 1px dashed #777;
+}
+.form-group {
+    margin: 5em 0;
+}
+
+.form-group input {
+    margin-top: 5em;
+}

@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Niveau Grotesk', sans-serif;                                     
+}
+
+:root{
+    --black: #171b27;
+    --blue1: #1E293B;
+    --blue2: #475569;
+    --blue3: #D5DBE2;
+    --boder-black: .1em solid #171b27;
+    --boder-blue1: .1em solid #1E293B;
+    --boder-blue2: .1em solid #475569;
+    --boder-blue3: .1em solid #D5DBE2;
+    --boder-blue4: .1em solid #ccc;
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+.function :nth-child(4) a {
+    background: var(--blue1);
+}
+
+html body aside{
+    height: auto;
+}
+
+form, .search {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+button,
+select {
+    padding: .4em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+select option p {
+    font-size: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: .3em;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+button {
+    cursor: pointer;
+}
+
+button i {color: red;}
+
+.search button {
+    margin-left: 10px;
+}
+
+
+#controls {
+    width: 100%;
+    border-radius: .4em;
+    border: var(--boder-blue4);
+    display: none;
+    margin: 0 4em 3em 3em;
+}
+
+#studentTable {
+    width: 100%;
+    font-size: .9em;
+    table-layout: fixed;
+}
+
+#studentTable th {
+    background: var(--blue2);
+    color: #fff;
+}
+
+#studentTable th:first-child,
+#studentTable td:first-child {
+    width: 3em;
+}
+
+#studentTable td:nth-child(5),
+#studentTable th:nth-child(5) {
+    width: 6em;
+}
+
+#studentTable td:nth-child(8),
+#studentTable th:nth-child(8) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#studentTable td:nth-child(9),
+#studentTable th:nth-child(9) {
+    width: 6em;
+}
+#addTable {
+    font-size: .9em;
+    color: #475569;
+}
+
+#addTable td {
+    border: none;
+}
+
+#addTable span {
+    color: red;
+    font-size: 1.6em;
+    font-weight: 500;
+    position: relative;
+    top: .15em;
+}
+
+#addStudentBtn {
+    background-color: var(--blue1);
+    color: #fff;
+}
+
+#addStudentBtn i {
+    color: #fff;
+    margin-right: .3em;
+}
+
+#addStudentBtn:hover {
+    background: transparent;
+    color: var(--black);
+}
+
+#addStudentBtn:hover i {
+    color: var(--black);
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2em 0em 2em;
+    padding: 1em;
+}
+
+.btn i {
+    cursor: pointer;
+    font-size: 1.8em;
+    margin-right: 1em;
+    border-radius: 50%;
+    padding: .3em;
+    color: var(--blue2);
+}
+
+.btn i:hover {
+    background-color: #ddd;
+}
+
+.btn button {
+    position: relative;
+    width: 10em;
+    height: 3em;
+    background: var(--blue2);
+    color: #fff;
+    transition: 250ms ease;
+}
+
+.btn button:hover {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background: var(--blue1);
+    
+}
+
+.btn button:hover::after {
+    opacity: 0;
+}
+
+.btn button:hover::before {
+    left: 30%;
+    padding: 0 0 0 .6em;
+    font-size: 1.3em;
+}
+
+#add::before {
+    position: absolute;
+    left: 10%;
+    top: 33%;
+    content: "\2b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: 350ms ease;
+}
+
+#add::after {
+    position: absolute;
+    content: " Thêm học sinh";
+    right: -6%;
+    top: 30%;
+    bottom: 50%;
+    width: 10em;
+    transition: 350ms;
+}
+
+html footer {
+    bottom: 0;
+    margin-top: 2em;
+}
+
+#studentTable th input {
+    width: 10em;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.cdnfonts.com/css/niveau-grotesk-regular" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/adminAcc/enterScores.css">
+    <title>D3L - Nhập điểm</title>
+</head>
+<body class="d-flex">
+    <input type="checkbox" name="checkbox" id="collapse">
+    <label for="collapse" id="collapse-label"><i class="bi bi-arrow-right-circle-fill"></i></label>
+    <aside id="sidebar">
+        <div class="head justify-content-center">
+            <i class="bi bi-mortarboard-fill"></i>
+            <a href="/home/home.html" class="text-decoration-none">
+                <h3 class="text-white">D3L</h3>
+            </a>
+        </div>
+
+        <div class="function">
+            <div id="_1">
+                <div class="announcement">
+                    <a href="/adminAcc/announcement.html" class="text-decoration-none"><i class="bi bi-info-circle-fill"></i><h3>Thông tin chung</h3></a>
+                </div>
+                <div class="statistic">
+                    <a href="/adminAcc/statistic.html" class="text-decoration-none"><i class="bi bi-bar-chart-fill"></i><h3>Thống kê</h3></a>
+                </div>
+                <div class="class">
+                    <a href="/adminAcc/class.html" class="text-decoration-none"><i class="bi bi-book-fill"></i><h3>Quản lý lớp</h3></a>
+                </div>
+                <div class="studentList">
+                    <a href="/teacherAcc/studentList.html" class="text-decoration-none"><i class="bi bi-people-fill"></i><h3>Quản lý học sinh</h3></a>
+                </div>
+                <div class="studentDetails">
+                    <a href="/adminAcc/studentDetails.html" class="text-decoration-none"><i class="bi bi-person-exclamation"></i><h3>Chi tiết học sinh</h3></a>
+                </div>
+                <div class="teacherList">
+                    <a href="/adminAcc/teacherList.html" class="text-decoration-none"><i class="bi bi-person-workspace"></i><h3>Quản lý giáo viên</h3></a>
+                </div>
+                <div class="enterScores">
+                    <a href="/adminAcc/enterScores.html" class="text-decoration-none"><i class="bi bi-pencil-square"></i><h3>Nhập điểm</h3></a>
+                </div>
+            </div>
+            
+            <div id="_2">
+                <div class="setting">
+                    <a href="/setting/setting.html" class="text-decoration-none"><i class="bi bi-gear-fill"></i><h3>Cài đặt</h3></a>
+                </div>
+                <div class="logOut">
+                    <a href="/formLogin/object.html" class="text-decoration-none"><i class="bi bi-box-arrow-right"></i><h3>Đăng xuất</h3></a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="w-100">
+        <header class="w-100">
+            <p>Nhập điểm</p>
+            <div class="user">
+                <i class="bi bi-bell-fill" id="bell"></i>
+                <h3 class="fs-4">Lê Tiến Được</h3>
+                <i class="bi bi-person-circle ms-3"></i>
+            </div>
+        </header>
+        <h2>Nhập điểm</h2>
+        <div class="button-container">
+            <button id="addScoreBtn">Thêm điểm</button>
+        </div>
+        <div class="container">
+            <div class="form-container" id="scoreFormContainer" style="display:none;">
+                <form id="studentForm">
+                    <label for="studentId">Mã *</label>
+                    <input type="text" id="studentId" required>
+                    <label for="studentName">Tên *</label>
+                    <input type="text" id="studentName" required>
+                    <label for="math">Toán *</label>
+                    <input type="number" id="math" required>
+                    <label for="physics">Lý *</label>
+                    <input type="number" id="physics" required>
+                    <label for="chemistry">Hóa *</label>
+                    <input type="number" id="chemistry" required>
+                    <label for="biology">Sinh *</label>
+                    <input type="number" id="biology" required>
+                    <label for="history">Sử *</label>
+                    <input type="number" id="history" required>
+                    <label for="geography">Địa *</label>
+                    <input type="number" id="geography" required>
+                    <label for="civics">Công dân *</label>
+                    <input type="number" id="civics" required>
+                    <label for="english">Anh *</label>
+                    <input type="number" id="english" required>
+                    <label for="literature">Văn *</label>
+                    <input type="number" id="literature" required>
+                    <div style="text-align: center;">
+                        <button type="button" id="btn" onclick="addStudent()">Thêm</button>
+                    </div>
+                </form>
+            </div>
+            <div class="table-container">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã học sinh</th>
+                            <th>Tên học sinh</th>
+                            <th>Toán</th>
+                            <th>Lý</th>
+                            <th>Hóa</th>
+                            <th>Sinh</th>
+                            <th>Sử</th>
+                            <th>Địa</th>
+                            <th>Công dân</th>
+                            <th>Anh</th>
+                            <th>Văn</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <div><p>&copy; D3L. All rights reserved.</p></div>
+            <div>
+                <p>Tems</p>
+                <p>Privacy</p>
+                <p>Cookies</p>
+            </div>
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="/home/home.js"></script>
+    <script src="/adminAcc/enterScores.js"></script>
+</body>
+</html>
