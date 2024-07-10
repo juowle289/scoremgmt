@@ -5,16 +5,19 @@
     list-style: none;
     text-decoration: none;
     list-style: none;
+    --font-family: 'Niveau Grotesk', sans-serif;                                     
+}
+
+:root {
     --black: #171b27;
     --blue1: #1E293B;
     --blue2: #475569;
-    --blue3: #2563EB;
+    --blue3: #D5DBE2;
     --boder-black: .1em solid #171b27;
     --boder-blue1: .1em solid #1E293B;
     --boder-blue2: .1em solid #475569;
-    --boder-blue3: .1em solid #2563EB;
+    --boder-blue3: .1em solid #D5DBE2;
     --box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
-    --font-family: 'Niveau Grotesk', sans-serif;                                     
 }
 
 body {
@@ -22,7 +25,6 @@ body {
     font-family: var(--font-family);     
     margin: 0;
     padding: 0;
-    background-color: rgb(246, 249, 255);
     background-color:#F6F9FF;
 }
 
@@ -53,7 +55,6 @@ body p {
     height: 100vh;
     background-color: var(--blue2);
     padding-top: 5em;
-
 }
 
 .form-container h1 {
@@ -83,20 +84,6 @@ label {
     margin-bottom: 0.5em;
     color: #ffffff;
     font-size: 15px;
-}
-.ctn{
-    margin-bottom: 1.5em;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: .6em;
-    font-size: 15px;
-}
-.ctn hr{
-    background-color: #fff;
-    border: .01em solid #fff;
-    width: 33%;
 }
 
 input[type="email"],
@@ -131,8 +118,7 @@ button.login-btn {
 
 button.login-btn:hover {
     background-color: var(--blue3);
-    transform:translate3d(0.3);
-    transition: transform 0.3s, box-shadow 0.5s;
+    color: #171b27;
     box-shadow: 0 0 20px rgba(10, 10, 10, 0.3);
 }
 
@@ -174,12 +160,7 @@ p a:hover {
 
 
 form button img{width: 1.5em; height: 1.5em; margin-right: 0.5em;}
-.ctn hr {
-    flex: 1;
-    border: none;
-    height: 1px;
-    background: #ccc;
-}
+
 
 /* For object */
 
